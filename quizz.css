@@ -1,0 +1,39 @@
+#quiz {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 18px;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  color: white;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+p#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.lineaire-simple {
+  background: linear-gradient(red, purple);
+  width: 1490px;
+  height: 750px;
+  margin-right: 500px;
+}
+
+p{
+    color: white;
+}
