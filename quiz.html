@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  
+<div id="quiz">
+  <script>
+    function calculateScore() {
+  var score = 0;
+
+  var answer1 = document.querySelector('input[name="q1"]:checked');
+  var answer2 = document.querySelector('input[name="q2"]:checked');
+  var answer3 = document.querySelector('input[name="q3"]:checked');
+
+  var result = document.getElementById('result');
+  
+  // Réinitialisation du contenu de l'élément result
+  result.innerHTML = "";
+
+  if (answer1 && answer1.value === "a") {
+    score++;
+  } else if (answer1) {
+    result.innerHTML += "Question 1 : Mauvaise réponse. La bonne réponse est Peter Parker. <br>";
+  } else {
+    result.innerHTML += "Question 1 : Veuillez répondre à cette question. <br>";
+  }
+
+  if (answer2 && answer2.value === "c") {
+    score++;
+  } else if (answer2) {
+    result.innerHTML += "Question 2 : Mauvaise réponse. L'ennemi juré de Spider-Man est Green Goblin. <br>";
+  } else {
+    result.innerHTML += "Question 2 : Veuillez répondre à cette question. <br>";
+  }
+
+  if (answer3 && answer3.value === "c") {
+    score++;
+  } else if (answer3) {
+    result.innerHTML += "Question 3 : Mauvaise réponse. La couleur du costume de Iron Man est Rouge et or. <br>";
+  } else {
+    result.innerHTML += "Question 3 : Veuillez répondre à cette question. <br>";
+  }
+
+  if (answer1 && answer2 && answer3) {
+    result.innerHTML += "Félicitations ! Vous avez répondu correctement à toutes les questions. Votre score final est : " + score;
+  } else {
+    result.innerHTML += "Veuillez répondre à toutes les questions avant de vérifier.";
+  }
+}
+
+  </script>
+    <div class="lineaire-simple">
+<body>  
+<h2>Question 1:</h2>
+  <p>Quel est le vrai nom de Spider-Man ?</p>
+  <ul>
+    <li><input type="radio" name="q1" value="a"> Peter Parker</li>
+    <li><input type="radio" name="q1" value="b"> Tony Stark</li>
+    <li><input type="radio" name="q1" value="c"> Steve Rogers</li>
+  </ul>
+  
+  <h2>Question 2:</h2>
+  <p>Qui est l'ennemi juré de Spider-Man ?</p>
+  <ul>
+    <li><input type="radio" name="q2" value="a"> Thanos</li>
+    <li><input type="radio" name="q2" value="b"> Joker</li>
+    <li><input type="radio" name="q2" value="c"> Green Goblin</li>
+  </ul>
+  
+  <h2>Question 3:</h2>
+  <p>Quelle est la couleur du costume de Iron Man ?</p>
+  <ul>
+    <li><input type="radio" name="q3" value="a"> Rouge et bleu</li>
+    <li><input type="radio" name="q3" value="b"> Vert et violet</li>
+    <li><input type="radio" name="q3" value="c"> Rouge et or</li>
+  </ul>
+  
+  <button onclick="calculateScore()">Vérifier</button>
+  <p id="result"></p>
+</div>
+</div>
+</body>
+</html>
